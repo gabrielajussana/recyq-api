@@ -1,0 +1,40 @@
+{
+  "kind": "collectionType",
+  "collectionName": "recycling_feeds",
+  "info": {
+    "singularName": "recycling-feed",
+    "pluralName": "recycling-feeds",
+    "displayName": "RecyclingFeed"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "users": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::collection-location.collection-location",
+      "mappedBy": "recycling_feed"
+    },
+    "Image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
+    },
+    "Description": {
+      "type": "string"
+    },
+    "Likes": {
+      "type": "integer"
+    },
+    "Comments": {
+      "type": "string"
+    }
+  }
+}

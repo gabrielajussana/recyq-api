@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "collection_locations",
+  "info": {
+    "singularName": "collection-location",
+    "pluralName": "collection-locations",
+    "displayName": " CollectionLocation"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "address": {
+      "type": "string"
+    },
+    "openingHours": {
+      "type": "text"
+    },
+    "acceptedMaterials": {
+      "type": "string"
+    },
+    "recycling_feed": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::recycling-feed.recycling-feed",
+      "inversedBy": "users"
+    }
+  }
+}
