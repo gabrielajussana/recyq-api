@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "user_scores",
+  "info": {
+    "singularName": "user-score",
+    "pluralName": "user-scores",
+    "displayName": "UserScore",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "User": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::recycling-activity.recycling-activity",
+      "mappedBy": "user_score"
+    },
+    "score": {
+      "type": "integer"
+    },
+    "date": {
+      "type": "datetime"
+    },
+    "quantity": {
+      "type": "integer"
+    }
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "kind": "collectionType",
+  "collectionName": "recycling_activities",
+  "info": {
+    "singularName": "recycling-activity",
+    "pluralName": "recycling-activities",
+    "displayName": " RecyclingActivity",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "recyclableType": {
+      "type": "string"
+    },
+    "quantity": {
+      "type": "decimal"
+    },
+    "dateTime": {
+      "type": "datetime"
+    },
+    "collectionLocation": {
+      "type": "string"
+    },
+    "user_score": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::user-score.user-score",
+      "inversedBy": "User"
+    }
+  }
+}
